@@ -25,7 +25,7 @@ class AuthorViewSet(viewsets.GenericViewSet, mixins.ListModelMixin, mixins.Creat
 
     queryset = Author.objects.all()
     serializer_class = AuthorSerializer
-
+    authentication_classes = (TokenAuthentication,)
     permission_classes_by_action = {'list': [AllowAny], 'default': [IsAdminUser]}
 
     def get_permissions(self):
@@ -40,7 +40,7 @@ class IllustratorViewSet(viewsets.GenericViewSet, mixins.ListModelMixin, mixins.
 
     queryset = Illustrator.objects.all()
     serializer_class = IllustratorSerializer
-
+    authentication_classes = (TokenAuthentication,)
     permission_classes_by_action = {'list': [AllowAny], 'default': [IsAdminUser]}
 
     def get_permissions(self):
