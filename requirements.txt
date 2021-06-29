@@ -1,4 +1,4 @@
 Django>=3.2.2,<3.3.0
 djangorestframework>=3.12.4,<3.13.0
-pylint>=2.8.2,<2.9.0
-pytest>=6.2.4,<6.3.0
+drf-access-policy>=0.9.0,<0.9.1
+psycopg2>=2.8.6,<2.9
