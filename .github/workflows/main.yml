@@ -69,7 +69,7 @@ jobs:
             amirlevis/hd-
             ghcr.io/amirlevis/hd-
           flavor:
-            laters=false
+            latest=false
           tags: |
             type=raw, value=latest
 
