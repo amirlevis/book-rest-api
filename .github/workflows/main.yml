@@ -66,12 +66,12 @@ jobs:
         uses: docker/metadata-action@v3.3.0
         with:
          images: |
-            bretfisher/wordsmith-web
-            ghcr.io/bretfisher/wordsmith-web
-          flavor: |
-            latest=false
-          tags: |
-            type=raw,value=latest
+           amirlevis/hd
+         flavor: |
+          latest=false
+         tags:
+           type=raw, value=latest
+
 
       -
         name: Build and Push
