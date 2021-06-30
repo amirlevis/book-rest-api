@@ -66,8 +66,8 @@ jobs:
         uses: docker/metadata-action@v3.3.0
         with:
          images: |
-           amirlevis/hd
-           ghcr.io/amirlevis/hd
+           amirlevis/hd-${{ env.IMAGE_NAME }}
+           ghcr.io/amirlevis/hd-${{ env.IMAGE_NAME }}
          flavor: |
           latest=false
          tags:
