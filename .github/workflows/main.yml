@@ -65,13 +65,7 @@ jobs:
         id: docker_meta
         uses: docker/metadata-action@v3.3.0
         with:
-          images: |
-            amirlevis/hd-
-            ghcr.io/amirlevis/hd
-          flavor: |
-            latest=false
-          tags: |
-            type=raw, value=latest
+         images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
 
       -
         name: Build and Push
