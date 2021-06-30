@@ -65,7 +65,13 @@ jobs:
         id: docker_meta
         uses: docker/metadata-action@v3.3.0
         with:
-         images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+         images: |
+            bretfisher/wordsmith-web
+            ghcr.io/bretfisher/wordsmith-web
+          flavor: |
+            latest=false
+          tags: |
+            type=raw,value=latest
 
       -
         name: Build and Push
@@ -73,7 +79,6 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-
           builder: ${{ steps.buildx.outputs.name }}
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new
