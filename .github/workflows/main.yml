@@ -75,8 +75,8 @@ jobs:
           context: .
           platforms: linux/am64
           builder: ${{ steps.buildx.outputs.name }}
-          cache-from: type=local, src=/tmp/.buildx-cache
-          cache-to: type=local, dest=/tmp/.buildx-cache
+          cache-from: type=local,src=/tmp/.buildx-cache
+          cache-to: type=local,dest=/tmp/.buildx-cache-new
           push: ${{ github.event.name != 'pull_request' }}
           tags: ${{ steps.docker_meta.outputs.tags }}
           labels: ${{ steps.docker_meta.outputs.labels }}
