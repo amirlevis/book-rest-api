@@ -68,7 +68,7 @@ jobs:
           images: |
             amirlevis/hd-
             ghcr.io/amirlevis/hd
-          flavor:
+          flavor: |
             latest=false
           tags: |
             type=raw, value=latest
