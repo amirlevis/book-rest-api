@@ -7,7 +7,7 @@ COPY ./requirements.txt /requirements.txt
 COPY ./app /app
 
 WORKDIR /app
-EXPOSE 80
+EXPOSE 8000
 
 RUN python -m venv /py && \
     /py/bin/pip install --upgrade pip && \
